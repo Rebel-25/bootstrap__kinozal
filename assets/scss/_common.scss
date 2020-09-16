@@ -1,0 +1,55 @@
+html {
+  overflow-x: hidden;
+
+  font-size: $font-size;
+}
+
+body {
+  font-family: $font-main;
+  font-size: 1rem;
+}
+img {
+  width: 100%;
+}
+
+a {
+  color: $color-primary;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    color: $color-accent;
+  }
+}
+
+
+h1 {
+  font-family: $font-header;
+
+  @include xs-min {
+    margin: (-$gap / 2) 0 ($gap * 3);
+
+    font-size: 3rem;
+  }
+  @include xs {
+    margin: 0 0 ($gap * 2);
+
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-family: $font-header;
+
+  @include xs-min {
+    margin: 60px 0 45px 45px;
+
+    font-size: 2.5rem !important;
+  }
+  @include xs {
+    margin: 45px 0 30px 45px !important;
+
+    font-size: 1.75rem !important;
+  }
+}

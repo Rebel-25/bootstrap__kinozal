@@ -1,0 +1,35 @@
+.section-form {
+  position: relative;
+
+  overflow: hidden;
+  &__title {
+    @include after-title;
+    @include before-title;
+  }
+  &__text {
+    min-height: 46px;
+    padding-left: 16px;
+  }
+
+
+  &__email {
+    min-height: 46px;
+    padding-left: 16px;
+  }
+
+  &__textarea {
+    overflow: auto;
+
+    min-height: 214px;
+
+    resize: vertical;
+  }
+  .btn {
+    padding: 10px 16px;
+
+    border-radius: 6px;
+
+    font-size: 18px;
+    line-height: 1.3333333;
+  }
+}

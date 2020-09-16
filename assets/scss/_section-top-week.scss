@@ -1,0 +1,89 @@
+.top-week {
+  position: relative;
+
+  overflow: hidden;
+
+  transition: background-color 0.5s;
+  &-row {
+    margin-right: -$gap / 2;
+    margin-bottom: -$gap;
+    margin-left: -$gap / 2;
+  }
+  &-title {
+    @include after-title;
+    @include before-title;
+  }
+
+
+  &-item {
+    margin-bottom: $gap;
+    padding-right: $gap / 2;
+    padding-left: $gap / 2;
+
+    text-align: center;
+
+
+
+    &__title {
+      position: relative;
+      z-index: 10;
+
+      display: block;
+      overflow: hidden;
+
+      margin: 9px 0;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      font-size: 16px !important;
+      font-weight: 600;
+    }
+
+    &__thumbnail {
+      margin-bottom: 0;
+      &:hover,
+      &:focus {
+        .caption {
+          z-index: 10;
+
+          color: $color-light !important;
+        }
+      }
+    }
+    &::after {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 93%;
+      height: 97%;
+      margin: 0 auto;
+
+      content: "";
+      transition: opacity 0.5s ease-out;
+
+      opacity: 0;
+      border-radius: 0.3em;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      background: linear-gradient(to top , $color-accent 97%, );
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+    &__caption {
+      z-index: 10;
+
+      overflow: hidden;
+
+      padding: 0 !important;
+    }
+    &__image {
+      position: relative;
+      z-index: 10;
+    }
+  }
+}

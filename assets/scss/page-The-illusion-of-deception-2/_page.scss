@@ -1,0 +1,36 @@
+
+.panel-comit {
+  position: relative;
+
+  overflow: hidden;
+  &__title {
+    @include after-title;
+    @include before-title;
+  }
+  &__logo {
+    background-color: $color-accent !important;
+  }
+
+  &__text {
+    padding: 14px $gap $gap $gap ;
+    p {
+      margin: 0;
+    }
+  }
+  a {
+    letter-spacing: 0.1em;
+
+    color: $color-light;
+
+    font-size: 1.2rem;
+  }
+  span {
+    padding-left: 3px;
+
+    letter-spacing: 0.1em;
+
+    color: $color-light;
+
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,77 @@
+@mixin text-shortener {
+  display: block;
+  overflow: hidden;
+
+  white-space: inherit;
+  text-overflow: ellipsis;
+}
+
+@mixin block-shortener($fz: 1rem, $lh: 1.5, $h: 70px, $l: 3) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+
+  height: $h;
+
+  font-size: $fz;
+  line-height: $fz * $lh;
+
+  -webkit-line-clamp: $l;
+}
+
+@mixin bg-color($a: 0, $rgb: 0) {
+  background: rgba($rgb, $rgb, $rgb, $a);
+}
+
+@mixin block-header {
+  margin: 0;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid $color-dark;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+}
+
+@mixin after-title {
+  &::after {
+    position: absolute;
+
+    width: 100%;
+    margin: 0.85em 0 0 $gap;
+
+    content: "";
+
+    border-bottom: 3px solid rgba(240, 173, 79, 0.7);
+  }
+}
+@mixin before-title {
+  &::before {
+    position: absolute;
+    left: 0;
+
+    width: 30px;
+    margin: 0.25em 0 0 0;
+
+    content: "";
+
+    border-bottom: 3px solid rgba(240, 173, 79, 0.7);
+  }
+}
+
+@mixin hedden {
+  position: relative;
+
+  overflow: hidden;
+}
