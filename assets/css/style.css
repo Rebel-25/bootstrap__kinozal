@@ -275,9 +275,7 @@ h2 {
   border-radius: 0.3em;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(97%, #df8a13));
-  background: -o-linear-gradient(bottom, #df8a13 97%);
-  background: linear-gradient(to top, #df8a13 97%);
+  background-color: #df8a13;
 }
 
 .top-week-item:hover::after {
@@ -484,6 +482,10 @@ h2 {
 
 .pleyer-info__col {
   font-size: 1.2em;
+}
+
+.pleyer-info__wrapper {
+  white-space: nowrap;
 }
 
 .pleyer-info__wrapper:not(:last-of-type) {

@@ -12,6 +12,8 @@
   }
   .panel {
     margin-bottom: 20px;
+  
+   
   }
   .panel-body {
     min-height: 20px;
@@ -40,7 +42,9 @@
     font-size: 1.2em;
   }
 
-
+&__wrapper{
+  white-space: nowrap;
+}
   &__wrapper:not(:last-of-type) {
     margin-right: $gap;
   }
